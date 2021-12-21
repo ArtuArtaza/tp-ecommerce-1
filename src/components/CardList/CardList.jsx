@@ -5,14 +5,15 @@ const CardList = ({
 }) => {
     return (
         <>
-            <ul className="container" style={{listStyle:'none',padding:'0'}}>
+            <div className="container">
             { data.map((product,i) => (
-                    <li className='row'>
-                        <Card product={product}/>
-                    </li>
+                    <div className="row border-primary border-5">
+                        <Card className="col-5" product={product}/>
+                    </div>
+
                 ))   
             }
-            </ul>
+            </div>
         </>
     )
 }

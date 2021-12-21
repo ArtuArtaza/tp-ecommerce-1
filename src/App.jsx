@@ -6,7 +6,7 @@ function App() {
 
   console.log(data)
   return (
-    <div className="App">
+    <div className="App d-flex justify-content-center">
       {
         loading?
           <h1>is Loading...</h1> 
