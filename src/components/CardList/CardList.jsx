@@ -1,18 +1,20 @@
 import useFetch from '../../hooks/useFetch';
 import Card from '../Card/Card'
-const CardList = () => {
-    const url = 'https://fakestoreapi.com/products'
-    const [data,loading] = useFetch(url)
-
+const CardList = ({
+    data
+}) => {
     return (
         <>
-            <ul>
-            {
-                data.map((product) => (
-                    <Card product={product}/>
-                ))
+            <ul className="container" style={{listStyle:'none',padding:'0'}}>
+            { data.map((product,i) => (
+                    <li className='row'>
+                        <Card product={product}/>
+                    </li>
+                ))   
             }
             </ul>
         </>
     )
 }
+
+export default CardList
